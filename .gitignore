@@ -1,0 +1,22 @@
+# Les conditions d'utilisation de Transhuman Design interdisent de redistribuer
+# King Arthur's Gold « sous quelque forme que ce soit », binaires du serveur et
+# ressources compris. Ce dépôt ne contient donc QUE le template : les fichiers
+# du jeu sont téléchargés depuis dl.kag2d.com au moment de l'Update dans AMP.
+#
+# Ces règles sont là pour qu'un fichier du jeu ne parte jamais par accident
+# dans un commit.
+KAGdedi
+KAG.exe
+dedicatedserver.sh
+dedicatedserver_shiprekt.sh
+forceupdate_server.sh
+*.tar.gz
+*.zip
+Base/
+Mods/
+Manual/
+Docs/
+Security/
+lib/
+App/
+__pycache__/

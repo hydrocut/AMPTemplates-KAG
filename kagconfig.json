@@ -1,0 +1,387 @@
+[
+    {
+        "DisplayName": "Port du jeu",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Serveur:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$GamePort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "sv_port",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Nom du serveur",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Serveur:dns:1",
+        "Description": "Le nom affiche dans la liste des serveurs du jeu. C'est la seule chose que la plupart des joueurs verront avant de cliquer.",
+        "Keywords": "nom,name,serveur,sv_name",
+        "FieldName": "sv_name",
+        "InputType": "text",
+        "ParamFieldName": "sv_name",
+        "DefaultValue": "FR TeamKit",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Description du serveur",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Serveur:dns:1",
+        "Description": "Le texte affiche sous le nom dans la liste des serveurs. Bon endroit pour le lien du Discord.",
+        "Keywords": "description,info,sv_info",
+        "FieldName": "sv_info",
+        "InputType": "text",
+        "ParamFieldName": "sv_info",
+        "DefaultValue": "Serveur communautaire TeamKit.fr",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Mot de passe du serveur",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Serveur:dns:1",
+        "Description": "Laisse vide pour un serveur ouvert a tous. Rempli, le serveur reste visible dans la liste mais demande ce mot de passe.",
+        "Keywords": "mot,passe,password,sv_password",
+        "FieldName": "sv_password",
+        "InputType": "Password",
+        "ParamFieldName": "sv_password",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Mot de passe RCON",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Serveur:dns:1",
+        "Description": "Donne les pouvoirs d'administration en jeu (kick, ban, changement de map, editeur). A remplir : sans lui, personne ne peut administrer depuis le jeu.",
+        "Keywords": "rcon,admin,mot,passe,sv_rconpassword",
+        "FieldName": "sv_rconpassword",
+        "InputType": "Password",
+        "ParamFieldName": "sv_rconpassword",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Annoncer le serveur publiquement",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Serveur:dns:1",
+        "Description": "Inscrit le serveur au serveur maitre de THD, donc dans la liste que voient tous les joueurs. Sans ca, il faut se connecter par son adresse IP.",
+        "Keywords": "annonce,public,liste,register,sv_register",
+        "FieldName": "sv_register",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_register",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Envoyer la minicarte a l'API",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Serveur:dns:1",
+        "Description": "Affiche un apercu de la carte en cours dans la liste des serveurs. Un serveur avec apercu se fait cliquer davantage.",
+        "Keywords": "minicarte,minimap,apercu,sv_sendminimap",
+        "FieldName": "sv_sendminimap",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_sendminimap",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Mode de jeu",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Partie:sports_esports:2",
+        "Description": "Les six modes livres avec le jeu. CTF est le mode phare (capture de drapeau, 3 classes). SmallCTF pour peu de joueurs. WAR remplace l'ancien TTH. La valeur est le nom du dossier sous Base/Rules.",
+        "Keywords": "mode,jeu,gamemode,sv_gamemode",
+        "FieldName": "sv_gamemode",
+        "InputType": "enum",
+        "ParamFieldName": "sv_gamemode",
+        "DefaultValue": "CTF",
+        "EnumValues": {
+            "CTF": "CTF - capture de drapeau (le mode phare)",
+            "SmallCTF": "SmallCTF - capture de drapeau, petites cartes",
+            "TDM": "Team Deathmatch - combat par equipes",
+            "WAR": "WAR - conquete de territoire (ex-TTH)",
+            "Sandbox": "Sandbox - construction libre",
+            "Challenge": "Challenge - defis"
+        }
+    },
+    {
+        "DisplayName": "Rotation des cartes",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Partie:sports_esports:2",
+        "Description": "Laisse VIDE pour que le mode de jeu utilise sa propre rotation officielle : c'est le bon reglage dans 99 % des cas. Sinon, chemin d'un fichier de cycle (voir Base/Maps/mapcycle.cfg.example).",
+        "Keywords": "rotation,cartes,maps,cycle,sv_mapcycle",
+        "FieldName": "sv_mapcycle",
+        "InputType": "text",
+        "ParamFieldName": "sv_mapcycle",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Melanger la rotation",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Partie:sports_esports:2",
+        "Description": "Tire les cartes au hasard au lieu de suivre l'ordre du fichier.",
+        "Keywords": "melange,hasard,shuffle,sv_mapcycle_shuffle",
+        "FieldName": "sv_mapcycle_shuffle",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_mapcycle_shuffle",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Enchainer les cartes automatiquement",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Partie:sports_esports:2",
+        "Description": "Passe a la carte suivante a la fin d'une partie. A laisser actif, sinon le serveur reste bloque sur la meme carte.",
+        "Keywords": "enchainer,auto,cycle,sv_mapautocycle",
+        "FieldName": "sv_mapautocycle",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_mapautocycle",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Gravite",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Partie:sports_esports:2",
+        "Description": "9.81 est la valeur normale. La baisser rend les sauts et les chutes lunaires : c'est le levier le plus amusant du serveur pour une soiree speciale.",
+        "Keywords": "gravite,gravity,sv_gravity",
+        "FieldName": "sv_gravity",
+        "InputType": "number",
+        "ParamFieldName": "sv_gravity",
+        "DefaultValue": "9.81",
+        "Placeholder": "9.81",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Nombre de bots",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Partie:sports_esports:2",
+        "Description": "Des bots pour remplir un serveur vide. Tous les modes ne les utilisent pas.",
+        "Keywords": "bots,sv_bots",
+        "FieldName": "sv_bots",
+        "InputType": "number",
+        "ParamFieldName": "sv_bots",
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "Suffix": "bots",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Joueurs maximum",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Joueurs:group:3",
+        "Description": "Nombre de places. KAG tient une grosse trentaine de joueurs sans souci ; au-dela, les cartes de CTF deviennent etroites.",
+        "Keywords": "joueurs,places,max,maxplayers,sv_maxplayers",
+        "FieldName": "sv_maxplayers",
+        "InputType": "number",
+        "ParamFieldName": "sv_maxplayers",
+        "DefaultValue": "32",
+        "Placeholder": "32",
+        "Suffix": "joueurs",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Places reservees",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Joueurs:group:3",
+        "Description": "Places EN PLUS du maximum, accessibles seulement aux joueurs privilegies (seclevs). Pratique pour que le staff puisse toujours entrer sur un serveur plein.",
+        "Keywords": "places,reservees,staff,sv_reservedslots",
+        "FieldName": "sv_reservedslots",
+        "InputType": "number",
+        "ParamFieldName": "sv_reservedslots",
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "Suffix": "places",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Le staff peut rejoindre un serveur plein",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Joueurs:group:3",
+        "Description": "Autorise les joueurs ayant le droit join_full (fichier Security/seclevs.cfg) a entrer malgre un serveur complet.",
+        "Keywords": "plein,full,staff,sv_enable_joinfull",
+        "FieldName": "sv_enable_joinfull",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_enable_joinfull",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Ping maximum",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Joueurs:group:3",
+        "Description": "Au-dela de ce ping, le joueur est expulse. Un joueur a tres haut ping ralentit tout le serveur, pas seulement lui.",
+        "Keywords": "ping,latence,max,sv_maxping",
+        "FieldName": "sv_maxping",
+        "InputType": "number",
+        "ParamFieldName": "sv_maxping",
+        "DefaultValue": "350",
+        "Placeholder": "350",
+        "Suffix": "ms",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Editeur de cartes autorise",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Joueurs:group:3",
+        "Description": "Permet a un joueur ayant le RCON d'ouvrir l'editeur de cartes en pleine partie.",
+        "Keywords": "editeur,editor,cartes,sv_alloweditor",
+        "FieldName": "sv_alloweditor",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_alloweditor",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Ban pour deconnexion en etant gele",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Joueurs:group:3",
+        "Description": "Duree du ban, en minutes, pour qui quitte la partie alors qu'il est gele. Anti-rage-quit. 0 desactive.",
+        "Keywords": "ban,gele,freeze,rage,sv_freezeban_time",
+        "FieldName": "sv_freezeban_time",
+        "InputType": "number",
+        "ParamFieldName": "sv_freezeban_time",
+        "DefaultValue": "30",
+        "Placeholder": "30",
+        "Suffix": "minutes",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Laisser les KAG Guards moderer",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Moderation:shield:4",
+        "Description": "ACTIF PAR DEFAUT DANS LE JEU. Les moderateurs benevoles de THD (les KAG Guards) peuvent alors kicker et bannir sur TON serveur sans te demander. En echange, ils le defendent quand ton staff n'est pas la. Le desactiver te rend seul responsable de la moderation.",
+        "Keywords": "guards,moderateurs,thd,globals,sv_allow_globals_mods",
+        "FieldName": "sv_allow_globals_mods",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_allow_globals_mods",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Appliquer les bans globaux THD",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Moderation:shield:4",
+        "Description": "Refuse les joueurs bannis au niveau des comptes THD. Utile contre les tricheurs connus, au prix de faux positifs possibles.",
+        "Keywords": "bans,globaux,thd,sv_global_bans",
+        "FieldName": "sv_global_bans",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_global_bans",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Mods verifies uniquement",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Moderation:shield:4",
+        "Description": "N'accepte que des mods enregistres et distribues par le developpeur. A laisser actif tant que tu n'installes pas de mod maison.",
+        "Keywords": "mods,verifies,sv_verify_mods",
+        "FieldName": "sv_verify_mods",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_verify_mods",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Serveur sur liste blanche",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Moderation:shield:4",
+        "Description": "Actif : SEULS les pseudos listes dans Security/whitelist.cfg peuvent entrer (serveur prive). Inactif : tout le monde entre sauf la liste noire.",
+        "Keywords": "liste,blanche,whitelist,prive,security_whitelist_active",
+        "FieldName": "security_whitelist_active",
+        "InputType": "checkbox",
+        "ParamFieldName": "security_whitelist_active",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Mise en veille quand le serveur est vide",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Reseau et performances:speed:5",
+        "Description": "Le serveur s'endort tant qu'aucun joueur n'est connecte, et ne consomme plus de processeur. A laisser actif sur une machine partagee.",
+        "Keywords": "veille,pause,vide,cpu,sv_canpause",
+        "FieldName": "sv_canpause",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_canpause",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Compression reseau",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Reseau et performances:speed:5",
+        "Description": "Compresse les paquets : moins de bande passante, un peu plus de processeur. La desactiver n'a de sens que si le serveur sature en CPU.",
+        "Keywords": "compression,reseau,sv_compression",
+        "FieldName": "sv_compression",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_compression",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Redemarrer a la mise a jour du jeu",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Reseau et performances:speed:5",
+        "Description": "Le serveur se ferme et se relance seul quand une mise a jour du jeu est detectee, au changement de carte. Sans ca, il reste sur une version que les joueurs a jour ne peuvent plus rejoindre.",
+        "Keywords": "redemarrage,mise,jour,update,sv_restart_on_update",
+        "FieldName": "sv_restart_on_update",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_restart_on_update",
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Console RCON en TCP",
+        "Category": "King Arthur's Gold:castle",
+        "Subcategory": "Reseau et performances:speed:5",
+        "Description": "Ouvre une console distante en TCP sur le MEME numero de port que le jeu. Inutile ici : la console d'AMP lit deja directement le serveur. A n'activer que pour brancher un outil externe, et il faut alors ouvrir ce port en TCP dans le pare-feu.",
+        "Keywords": "tcpr,rcon,console,tcp,sv_tcpr",
+        "FieldName": "sv_tcpr",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_tcpr",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    }
+]

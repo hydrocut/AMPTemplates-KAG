@@ -1,0 +1,30 @@
+[
+    {
+        "UpdateStageName": "Telechargement du serveur",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://dl.kag2d.com/kag-linux32-dedicated-release.tar.gz",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Droit d'execution sur le binaire",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd kag && chmod +x KAGdedi dedicatedserver.sh forceupdate_server.sh >/dev/null 2>&1; exit 0\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Creation de autoconfig.cfg",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateFile",
+        "UpdateSourceData": "# autoconfig.cfg - King Arthur's Gold\n# Pose par le template AMP TeamKit.\n#\n# AMP reecrit au demarrage toutes les valeurs qu'il gere : modifie-les dans\n# l'onglet Configuration d'AMP, pas ici, sinon elles seront ecrasees.\n#\n# Attention : KAG peut reecrire ce fichier lui-meme en s'arretant, en y\n# remettant ses commentaires en fin de ligne. C'est prevu, le template sait\n# les relire.\n\nsv_name = FR TeamKit\nsv_info = Serveur communautaire TeamKit.fr\n\nsv_gamemode = CTF\nsv_mapcycle = \nsv_mapcycle_shuffle = 1\nsv_mapautocycle = 1\nsv_gravity = 9.81\nsv_bots = 0\n\nsv_maxplayers = 32\nsv_reservedslots = 0\nsv_enable_joinfull = 1\nsv_maxping = 350\nsv_maxping_warnings = 600\nsv_maxhack_warnings = 25\nsv_alloweditor = 1\nsv_freezeban_time = 30\n\nsv_password = \nsv_rconpassword = \nsv_port = 50301\nsv_register = 1\nsv_sendminimap = 1\nsv_tcpr = 0\n\nsv_allow_globals_mods = 1\nsv_global_bans = 0\nsv_verify_mods = 1\n\nsv_canpause = 1\nsv_compression = 1\nsv_restart_on_update = 1\n\nsecurity_whitelist_active = 0\nsecurity_whitelist = Security/whitelist.cfg\nsecurity_blacklist = Security/blacklist.cfg\nsecurity_ignorelist = Security/ignorelist.cfg\nsecurity_hidenamelist = Security/hidenamelist.cfg\nsecurity_seclevs = Security/seclevs.cfg\n",
+        "UpdateSourceArgs": "{{$FullBaseDir}}autoconfig.cfg",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    }
+]

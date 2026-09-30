@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "UDP",
+        "Port": 50301,
+        "Ref": "GamePort",
+        "Name": "Port du jeu",
+        "Description": "Tout passe par ce seul port UDP : connexion des joueurs, telechargement des maps et annonce au serveur maitre de THD. C'est le seul port a ouvrir."
+    }
+]
